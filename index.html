@@ -74,27 +74,6 @@
     <title>Welcome Page</title>
   </head>
   <body style="background-color:powderblue;font-family:courier;font-size:300%;text-align:center;">
-    <script>
-      var slideIndex = 0;
-  showSlides();
-
-  function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1;}
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-  }
-    </script>
     <h1 style="font-size:600%;"> This is Heading 1</h1>
     <h2 style="border:2px solid DodgerBlue;"> This is Heading 2</h2>
     <h3 style="border:2px "> This is Heading 3</h3>
@@ -155,33 +134,58 @@
       </tr>
     </table>
     <hr>
-<div class="slideshow-container">
 
-      <div class="mySlides fade">
-        <div clas="numbertext">1 / 3</div>
-        <img src="img-1.jpeg" style="width:100%">
-        <div class="text">Caption Text</div>
-      </div>
+  <div class="slideshow-container">
 
-      <div class="mySlides fade">
-        <div clas="numbertext">2 / 3</div>
-        <img src="img2.jpeg" style="width:100%">
-        <div class="text">Caption Two</div>
-      </div>
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="img-1.jpeg" style="width:100%">
+    <div class="text">Caption Text</div>
+  </div>
 
-      <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <img src="img3.jpeg" style="width:100%">
-        <div class="text">Caption Three</div>
-      </div>
-    </div>
-    <br>
-    <div style="text-align:center">
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
-    <br>
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="img2.jpeg" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="img3.jpeg" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <script>
+  var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+  </script>
+
     <hr>
     <img src="img-1.jpeg" alt="Image of a Person standing with Hand on Top" align="center" style="margin:30px; border:10px solid Purple; padding: 30px;">
     <h1> List of 140 colors html supports</h1>
